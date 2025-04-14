@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Page</title>
+</head>
+<body>
+    <button id="sendMessageButton">Send Message</button>
+
+    <script>
+        const sendMessageButton = document.getElementById('sendMessageButton');
+
+        // Send a message to the parent page when the button is clicked
+        sendMessageButton.addEventListener('click', () => {
+            window.parent.postMessage('closeModal', 'https://your-main-page.com');
+        });
+    </script>
+</body>
+</html>
