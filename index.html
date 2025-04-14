@@ -9,12 +9,13 @@
     <button id="sendMessageButton">Send Message</button>
 
     <script>
+        function sendMess(){
+             window.parent.postMessage('closeModal', 'https://your-main-page.com');
+        }
         const sendMessageButton = document.getElementById('sendMessageButton');
 
         // Send a message to the parent page when the button is clicked
-        sendMessageButton.addEventListener('click', () => {
-            window.parent.postMessage('closeModal', 'https://your-main-page.com');
-        });
+        sendMessageButton.addEventListener('click',sendMess);
     </script>
 </body>
 </html>
